@@ -21,11 +21,15 @@ public class Mycalculator {
 					|| userInput.charAt(i)=='^')
 			{
 				oper=userInput.charAt(i);
-				String[] parts = userInput.split("\\"+Character.toString(oper));
-				a =Double.parseDouble(parts[0].trim());
-				b =Double.parseDouble(parts[1].trim());
+				//1st we make an array called parts out of userInput which we split
+				//along the oper character. ex. 3 + 2 gets split into parts[0]="3" & parts[1]="2"
+				//We then convert those strings to doubles which we assign to the 
+				//1st & 2nd #s tat we will do calculations with
+				String[] parts = userInput.split("\\"+Character.toString(oper)); 
+				a =Double.parseDouble(parts[0].trim()); //String.trim() --gets rid of any spaces
+				b =Double.parseDouble(parts[1].trim()); //Double.parseDouble(String)--converts String to Double
 				
-				System.out.printf("%f %s %f", a,oper,b);//Debug
+				//System.out.printf("%f %s %f", a,oper,b);//Debug
 			}
 		}
 		// Calculate
@@ -51,8 +55,9 @@ public class Mycalculator {
 		}
 		// List
 		//System.out.printf("%d%s%d = %d", a,oper,b,c);//Debug
-		String out=String.format(" %f %s %f = %f", a, oper, b, c);
-		JOptionPane.showMessageDialog(null,out);
+		//%.2f <-- the .2 makes it so tat we are only shown 2 places after the decimal														
+		String out=String.format(" %.2f %s %.2f = %.2f", a, oper, b, c); 	
+		JOptionPane.showMessageDialog(null,out);				 
 		input.close();	
 	}
 }
