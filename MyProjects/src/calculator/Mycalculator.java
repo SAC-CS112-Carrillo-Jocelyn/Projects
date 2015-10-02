@@ -1,19 +1,22 @@
 package calculator;
 import javax.swing.JOptionPane;
 import java.util.Scanner;
-
 public class Mycalculator {
-
 	public static void main(String[] args) {
+		//Simple calculator that takes equations in the form a + b
+		//where the operation can be + - * / ^
+		// NOT BULLET PROOF
+		//--------------------------------------
 		// Declare
 		Scanner input = new Scanner(System.in);
 		double a=0, b=0, c = 0;
 		char oper='a';
 		
-		// Start
+		// Start; take user input
 		String userInput= new String( JOptionPane.showInputDialog
 				("Simple Calculator\n Enter your equation: "));
 		
+		//Breakdown user input and assign to correct variables
 		for(int i=0; i<userInput.length(); i++)
 		{
 			if(userInput.charAt(i)=='+'||userInput.charAt(i)=='-'
@@ -53,7 +56,7 @@ public class Mycalculator {
 			System.out.printf("Invalid Operation. Try Again.");
 			System.exit(0);
 		}
-		// List
+		// Show answer
 		//System.out.printf("%d%s%d = %d", a,oper,b,c);//Debug
 		//%.2f <-- the .2 makes it so tat we are only shown 2 places after the decimal														
 		String out=String.format(" %.2f %s %.2f = %.2f", a, oper, b, c); 	
