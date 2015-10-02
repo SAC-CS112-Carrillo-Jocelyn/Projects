@@ -43,18 +43,16 @@ public class Mycalculator {
 			c = a / b;
 			break;
 		case '^':
-			c = Math.pow(a, b);		
+			c = Math.pow(a, b);	
+			break;
 		default:
 			System.out.printf("Invalid Operation. Try Again.");
 			System.exit(0);
 		}
 		// List
 		//System.out.printf("%d%s%d = %d", a,oper,b,c);//Debug
-		
 		String out=String.format(" %f %s %f = %f", a, oper, b, c);
 		JOptionPane.showMessageDialog(null,out);
-		input.close();
-		
+		input.close();	
 	}
-
 }
