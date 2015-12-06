@@ -1,7 +1,5 @@
 package ticTacToe;
-
 import java.awt.EventQueue;
-
 public class Program {
 	/**
 	 * Launch the application.
