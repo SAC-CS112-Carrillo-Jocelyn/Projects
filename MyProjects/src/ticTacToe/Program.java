@@ -3,7 +3,10 @@ import java.awt.EventQueue;
 public class Program {
 	/**
 	 * Launch the application.
-	 * main method we don't care about...
+	 * want this separated so it doesn't get messed up...
+	 * Java automatically made this when the form was made
+	 * I tell it about TicTacToe, the game engine, otherwise
+	 * game won't work.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
